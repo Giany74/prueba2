@@ -8,6 +8,10 @@ import './index.css';
 import App from './components/app';
 import { AuthProvider } from './components/auth/context';
 
+import configureStore from './store';
+
+const store = configureStore();
+
 const accessToken = storage.get('auth');
 configureClient({ accessToken });
 
